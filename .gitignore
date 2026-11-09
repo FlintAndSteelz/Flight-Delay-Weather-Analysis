@@ -12,8 +12,12 @@ __pycache__/
 # Environment variables
 .env
 
-# Data
-data/
+# Ignore actual data files
+data/*
+
+#keep directory structure
+!data/*
+!data/**/.gitkeep
 
 # Generated results
 ket_qua/
