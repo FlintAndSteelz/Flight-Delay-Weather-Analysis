@@ -12,12 +12,13 @@ __pycache__/
 # Environment variables
 .env
 
-# Ignore actual data files
-data/*
-
-#keep directory structure
-!data/*
-!data/**/.gitkeep
+# Data: ignore all actual data files, keep folder structure
+/data/**  
+#bỏ qua toàn bộ nội dung bên trong data
+!/data/**/
+#cho phép git nhạn diện lại các thư mục con
+!/data/**/.gitkeep
+# cho phép git theo dõi những file git.keep
 
 # Generated results
 ket_qua/
