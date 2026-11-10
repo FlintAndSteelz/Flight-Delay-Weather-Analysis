@@ -34,13 +34,15 @@ The project uses two main categories of data:
 
 - Source: TODO - Specify the selected weather data provider
 - Description: Historical weather observations relevant to JFK Airport
-- Storage location: data/raw/bts/ 
+- Storage location: data/raw/weather/ 
 
 Note: Raw datasets are not stored in this GitHub repository. Each team member is responsible for obtaining the required datasets and placing them in the designated directories according the project instructions 
 
 ## 4. Project Structure  
+
 The repository is organized as follows:
 
+```text
 Flight-Delay-Weather-Analysis/
 │
 ├── data/
@@ -51,18 +53,19 @@ Flight-Delay-Weather-Analysis/
 │   └── processed/
 │
 ├── ket_qua/
+│   └── figures/
 │
 ├── notebooks/
 │
 ├── src/
 │   └── flight_weather/
+│       ├── __init__.py
 │       ├── analyzer.py
 │       ├── data_cleaner.py
 │       ├── data_loader.py
 │       ├── data_merger.py
 │       ├── data_source.py
-│       ├── visualizer.py
-│       └── __init__.py
+│       └── visualizer.py
 │
 ├── tai_lieu/
 │
@@ -74,6 +77,8 @@ Flight-Delay-Weather-Analysis/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
+
 
 
 Directory descriptions:
