@@ -155,17 +155,65 @@ For Window PowerShell:
 
 ## 7. Data Preparation
 
-After setting up the Python environment, prepare the datasets: 
+### 7.1 Data Sources
+This project uses two datasets covering January 1 - March 31, 2025
 
-    1. Obtain the required historical flight dataset from BTS
-    2. Obtain the corressponding historical weather dataset drom the selected weather provider
-    3. Place the flight dataset in:
-        -> data/raw/bts/
-    4. Place the weather dataset in:
-        -> data/raw/weather/
-    5. Follow the data preparation instructions and file naming conventions defined by the project
+Flight Data – Bureau of Transportation Statistics (BTS)
+    _Dataset: Airline On-Time Performance
+    _Airport John F.Kennedy International Airport (JFK)
+    _Source: https://www.transtats.bts.gov/PREZIP/
 
-Important: DO NOT upload raw datasets, intermediate datasets, processed datasets, or the virtual environment to GitHub
+Weather Data – Iowa Environmental Mesonet (IEM)
+    _Dataset: Historical ASOS Weather Observations
+    _Station: JFK
+    _Source: https://mesonet.agron.iastate.edu/request/download.phtml?network=NY_ASOS
+### 7.2 Shared Dataset - Google Drive
+Google Drive: https://drive.google.com/drive/folders/1rcirCM06_SSS7WX8mdmfyVUiZjYcAQVN?usp=drive_link
+
+To avoid downloading the same multiple times, all team members will use the shared dataset stored on GG Drive
+The original data files are not stored in this GitHub repository
+
+### 7.3 Required Dataset Files
+BTS Flight Data
+Download the following three ZIP files:
+    _On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_1.zip
+    _On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_2.zip
+    _On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_3.zip
+Place them inside data/raw/bts/.
+
+IEM Weather Data
+    _JFK.csv
+Place the weather file inside data/raw/weather/.
+
+### 7.4 Expected Directory Structure
+data/
+└── raw/
+    ├── bts/
+    │   ├── On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_1.zip
+    │   ├── On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_2.zip
+    │   └── On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_3.zip
+    └── weather/
+        └── JFK.csv
+### 7.5 Installation Instructions
+
+1. Clone the GitHub repository.
+2. Follow Section 6 – Installation Guide to set up the Python environment.
+3. Download the shared dataset from Google Drive.
+4. Place the BTS ZIP files inside data/raw/bts/.
+5. Place the IEM CSV file inside data/raw/weather/.
+6. Keep the original filenames unchanged.
+7. Once the data inspection script is implemented with ZIP support, run:
+    python scripts/01_inspect_data.py
+
+### 7.6 Important rules
+    _Do not modify or overwrite the original raw datasets
+    _Do not commit large datasets on GitHub
+    _Do not commit virtual environments or sensitive creditials
+    _All team members must use the same dataset version
+    _Any dataset updates must be communicated to the team
+    _Python source code must be shared through this GitHUb
+    
+
 
 ## 8. Project workflow
 
