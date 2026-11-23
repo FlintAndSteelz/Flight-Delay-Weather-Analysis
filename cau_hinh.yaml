@@ -1,0 +1,25 @@
+
+project:
+  name: Flight Delay and Weather Analysis
+  airport: JFK
+
+  start_year: 2023
+  end_year: 2025
+
+  flight_direction: departures
+
+  timezone: America/New_York
+
+data:
+  bts:
+    raw_dir: data/raw/bts
+
+  weather:
+    raw_dir: data/raw/weather
+    station: JFK
+
+  interim_dir: data/interim
+  processed_dir: data/processed
+
+results:
+  figures_dir: ket_qua/figures
